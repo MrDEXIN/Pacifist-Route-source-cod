@@ -1,0 +1,6 @@
+{
+  "parent": "block/cube_all",
+  "textures": {
+    "all": "pacifist_route:block/custom_wool"
+  }
+}

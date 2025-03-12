@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "   ",
+    "IF ",
+    "IG "
+  ],
+  "key": {
+    "F": {
+      "item": "minecraft:crimson_fungus"
+    },
+    "I": {
+      "item": "pacifist_route:ironfigna"
+    },
+    "G": {
+      "item": "minecraft:nether_wart"
+    }
+  },
+  "result": {
+    "item": "pacifist_route:ironfigna_bagr",
+    "count": 1
+  }
+}
