@@ -3,5 +3,13 @@
   "item.pacifist_route.ironfigna_bagr": "Crimson rod",
   "item.pacifist_route.diamond_ignt": "Diamond fragment",
   "item.pacifist_route.dough": "Dough",
-  "itemGroup.pacifist_route.group": "Pacifist Route"
+  "itemGroup.pacifist_route.group": "Pacifist Route",
+  "itemGroup.pacifist_route.group_ritual": "Pacifist rituals",
+  "item.pacifist_route.ritual_knife": "Ritual knife",
+  "effect.pacifist_route.bleeding": "Bleeding",
+  "item.pacifist_route.soul_prison": "Prison of Souls",
+  "item.pacifist_route.wither_soul": "Visor's soul",
+  "item.pacifist_route.soul_prison.tooltip":"§oAn echo of the times when the undead tread the earth...",
+  "item.pacifist_route.wither_soul.tooltip": "§oAlready at the touch you can feel all the rage stored inside...",
+  "item.pacifist_route.lightstone_nerve": "Lightstone nerve"
 }

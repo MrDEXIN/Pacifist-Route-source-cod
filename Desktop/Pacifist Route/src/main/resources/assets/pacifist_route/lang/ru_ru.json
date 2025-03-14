@@ -1,8 +1,16 @@
 {
-  "item.pacifist_route.ironfigna": "Железный стержешь",
+  "item.pacifist_route.ironfigna": "Железный стержень",
   "item.pacifist_route.ironfigna_bagr": "Багровый стержень",
   "item.pacifist_route.diamond_ignt": "Осколок алмаза",
   "item.pacifist_route.dough": "Тесто",
   "item.pacifist_route.human_skin": "Плоть",
-  "itemGroup.pacifist_route.group": "Путь пацифиста"
+  "itemGroup.pacifist_route.group": "Путь пацифиста",
+  "itemGroup.pacifist_route.group_ritual": "Пацифистские ритуалы",
+  "item.pacifist_route.ritual_knife": "Ритуальный нож",
+  "effect.pacifist_route.bleeding": "Кровотечение",
+  "item.pacifist_route.soul_prison": "Тюрьма душ",
+  "item.pacifist_route.wither_soul": "Душа визера",
+  "item.pacifist_route.soul_prison.tooltip":"§oОтголосок тех времён, когда по земле ступала нежить...",
+  "item.pacifist_route.wither_soul.tooltip": "§oУже при прикосновении можно почувствовать всю ярость, хранящуюся внутри...",
+  "item.pacifist_route.lightstone_nerve": "Светокаменный нерв"
 }

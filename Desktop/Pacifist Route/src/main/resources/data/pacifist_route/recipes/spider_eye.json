@@ -1,13 +1,21 @@
 {
-  "type": "minecraft:crafting_shapeless",
-  "ingredients": [
-    {
-      "item": "minecraft:string"
-    },
-    {
-      "item": "minecraft:sweet_berries"
-    }
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " H ",
+    "HKH",
+    " L "
   ],
+  "key": {
+    "H": {
+      "item": "pacifist_route:human_skin"
+    },
+    "K": {
+      "item": "minecraft:sweet_berries"
+    },
+    "L": {
+      "item": "pacifist_route:lightstone_nerve"
+    }
+  },
   "result": {
     "item": "minecraft:spider_eye",
     "count": 1

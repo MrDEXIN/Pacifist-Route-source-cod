@@ -1,9 +1,10 @@
 {
 	"schemaVersion": 1,
 	"id": "pacifist_route",
-	"version": "1.0.2",
+	"version": "1.0.3",
 	"name": "Pacifist Route",
 	"description": "A mod for peaceful survival gameplay.",
+	"icon": "assets/pacifist_route/icon.png",
 	"authors": [
 		"MrDEXIN"
 	],
