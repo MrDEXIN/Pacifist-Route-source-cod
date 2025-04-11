@@ -1,0 +1,29 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "DWD",
+    "TST",
+    "DCD"
+  ],
+  "key": {
+    "D": {
+      "item": "pacifist_route:diamond_ignt"
+    },
+    "W": {
+      "item": "minecraft:warped_fungus"
+    },
+    "T": {
+      "item": "minecraft:twisting_vines"
+    },
+    "S": {
+      "item": "minecraft:spider_eye"
+    },
+    "C": {
+      "item": "minecraft:cyan_dye"
+    }
+  },
+  "result": {
+    "item": "minecraft:ender_pearl",
+    "count": 1
+  }
+}

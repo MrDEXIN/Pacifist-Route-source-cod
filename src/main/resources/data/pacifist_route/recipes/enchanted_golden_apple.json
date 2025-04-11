@@ -1,0 +1,26 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "dgd",
+    "lal",
+    "dgd"
+  ],
+  "key": {
+    "g": {
+      "item": "minecraft:gold_ingot"
+    },
+    "d": {
+      "item": "pacifist_route:diamond_ignt"
+    },
+    "l": {
+      "item": "minecraft:lapis_block"
+    },
+    "a": {
+      "item": "minecraft:golden_apple"
+    }
+  },
+  "result": {
+    "item": "minecraft:enchanted_golden_apple",
+    "count": 1
+  }
+}

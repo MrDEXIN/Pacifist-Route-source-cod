@@ -1,0 +1,28 @@
+{
+	"schemaVersion": 1,
+	"id": "pacifist_route",
+	"version": "1.1.0",
+	"name": "Pacifist Route",
+	"description": "A mod for peaceful survival gameplay.",
+	"icon": "assets/pacifist_route/icon.png",
+	"authors": [
+		"MrDEXIN"
+	],
+	"contact": {
+		"homepage": "https://modrinth.com/user/MrDEXIN",
+		"sources": "https://github.com/MrDEXIN/Pacifist-Route-source-cod"
+	},
+	"license": "MIT",
+	"environment": "*",
+	"entrypoints": {
+		"main": ["name.modid.PacifistRoute"]
+	},
+	"mixins": [
+		"pacifist_route.mixins.json"
+	],
+	"depends": {
+		"fabricloader": ">=0.16.0",
+		"fabric-api": "*",
+		"minecraft": "1.20.1"
+	}
+}

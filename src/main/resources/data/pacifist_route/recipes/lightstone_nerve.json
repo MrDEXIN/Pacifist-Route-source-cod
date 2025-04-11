@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "   ",
+    "LK ",
+    "LK "
+  ],
+  "key": {
+    "K": {
+      "item": "minecraft:glowstone_dust"
+    },
+    "L": {
+      "item": "minecraft:string"
+    }
+  },
+  "result": {
+    "item": "pacifist_route:lightstone_nerve",
+    "count": 1
+  }
+}
