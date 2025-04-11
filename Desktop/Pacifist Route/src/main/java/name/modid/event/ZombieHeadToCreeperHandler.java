@@ -26,35 +26,27 @@ public class ZombieHeadToCreeperHandler implements UseBlockCallback {
         BlockState state = world.getBlockState(pos);
         ItemStack heldItem = player.getStackInHand(hand);
 
-        // Проверяем, что игрок кликает по голове зомби и держит порох
-        if (state.getBlock() == Blocks.ZOMBIE_HEAD && heldItem.getItem() == Items.GUNPOWDER) {
-            if (!world.isClient) { // Проверяем, что код выполняется на сервере
-                // Убираем порох из руки игрока
+        // Проверяем оба типа головы зомби
+        if ((state.getBlock() == Blocks.ZOMBIE_HEAD || state.getBlock() == Blocks.ZOMBIE_WALL_HEAD) && heldItem.getItem() == Items.GUNPOWDER) {
+            if (!world.isClient) {
                 heldItem.decrement(1);
 
-                // Получаем текущую ориентацию головы зомби
-                int rotation = state.get(Properties.ROTATION); // Свойство ROTATION определяет направление
+                BlockState creeperHeadState;
+                if (state.getBlock() == Blocks.ZOMBIE_HEAD) {
+                    int rotation = state.get(Properties.ROTATION);
+                    creeperHeadState = Blocks.CREEPER_HEAD.getDefaultState().with(Properties.ROTATION, rotation);
+                } else {
+                    var facing = state.get(Properties.HORIZONTAL_FACING);
+                    creeperHeadState = Blocks.CREEPER_WALL_HEAD.getDefaultState().with(Properties.HORIZONTAL_FACING, facing);
+                }
 
-                // Создаем новое состояние для головы крипера с той же ориентацией
-                BlockState creeperHeadState = Blocks.CREEPER_HEAD.getDefaultState().with(Properties.ROTATION, rotation);
-
-                // Заменяем голову зомби на голову крипера с сохранением ориентации
                 world.setBlockState(pos, creeperHeadState);
 
-                // Воспроизводим звук взрыва (или другой звук, подходящий для крипера)
-                world.playSound(
-                        null,                       // Игрок (null для всех игроков)
-                        pos,                        // Позиция звука
-                        SoundEvents.ENTITY_CREEPER_PRIMED, // Звук активации крипера
-                        SoundCategory.BLOCKS,       // Категория звука
-                        1.0F,                       // Громкость
-                        1.0F                        // Высота тона
-                );
+                world.playSound(null, pos, SoundEvents.ENTITY_CREEPER_PRIMED, SoundCategory.BLOCKS, 1.0F, 1.0F);
 
-                // Создаем лаймовые, зеленые и темно-зеленые частицы
-                spawnColoredParticles((ServerWorld) world, pos, new Vector3f(0.5F, 1.0F, 0.0F)); // Лаймовый
-                spawnColoredParticles((ServerWorld) world, pos, new Vector3f(0.0F, 1.0F, 0.0F)); // Зеленый
-                spawnColoredParticles((ServerWorld) world, pos, new Vector3f(0.0F, 0.5F, 0.0F)); // Темно-зеленый
+                spawnColoredParticles((ServerWorld) world, pos, new Vector3f(0.5F, 1.0F, 0.0F));
+                spawnColoredParticles((ServerWorld) world, pos, new Vector3f(0.0F, 1.0F, 0.0F));
+                spawnColoredParticles((ServerWorld) world, pos, new Vector3f(0.0F, 0.5F, 0.0F));
             }
 
             return ActionResult.SUCCESS;
@@ -63,19 +55,18 @@ public class ZombieHeadToCreeperHandler implements UseBlockCallback {
         return ActionResult.PASS;
     }
 
-    // Метод для создания цветных частиц
     private void spawnColoredParticles(ServerWorld world, BlockPos pos, Vector3f color) {
-        DustParticleEffect particleEffect = new DustParticleEffect(color, 1.0F); // Цвет и масштаб частиц
+        DustParticleEffect particleEffect = new DustParticleEffect(color, 1.0F);
         world.spawnParticles(
-                particleEffect,                     // Тип частиц (цветные пылевые частицы)
-                pos.getX() + 0.5,                  // X координата центра блока
-                pos.getY() + 0.3,                  // Y координата центра блока
-                pos.getZ() + 0.5,                  // Z координата центра блока
-                400,                                // Количество частиц
-                0.2,                               // Разброс по X
-                0.2,                               // Разброс по Y
-                0.2,                               // Разброс по Z
-                0.1                                // Скорость частиц
+                particleEffect,
+                pos.getX() + 0.5,
+                pos.getY() + 0.3,
+                pos.getZ() + 0.5,
+                400,
+                0.2,
+                0.2,
+                0.2,
+                0.1
         );
     }
 }

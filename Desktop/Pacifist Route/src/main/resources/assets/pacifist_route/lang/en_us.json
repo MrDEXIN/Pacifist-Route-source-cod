@@ -2,6 +2,7 @@
   "item.pacifist_route.ironfigna": "Iron rod",
   "item.pacifist_route.ironfigna_bagr": "Crimson rod",
   "item.pacifist_route.diamond_ignt": "Diamond fragment",
+  "item.pacifist_route.human_skin": "Flesh",
   "item.pacifist_route.dough": "Dough",
   "itemGroup.pacifist_route.group": "Pacifist Route",
   "itemGroup.pacifist_route.group_ritual": "Pacifist rituals",
@@ -11,5 +12,10 @@
   "item.pacifist_route.wither_soul": "Visor's soul",
   "item.pacifist_route.soul_prison.tooltip":"§oAn echo of the times when the undead tread the earth...",
   "item.pacifist_route.wither_soul.tooltip": "§oAlready at the touch you can feel all the rage stored inside...",
-  "item.pacifist_route.lightstone_nerve": "Lightstone nerve"
+  "item.pacifist_route.lightstone_nerve": "Lightstone nerve",
+  "item.pacifist_route.human_skin.quality.fresh": "Fresh",
+  "item.pacifist_route.human_skin.quality.stale": "Stale",
+  "item.pacifist_route.human_skin.quality.spoiling": "Decayed",
+  "item.pacifist_route.human_skin.quality.rotten": "Spoiled"
+
 }

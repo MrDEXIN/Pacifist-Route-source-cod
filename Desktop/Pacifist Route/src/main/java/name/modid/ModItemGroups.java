@@ -20,8 +20,6 @@ public class ModItemGroups {
                 entries.add(ModItems.IRONFIGNA_BAGR);
                 entries.add(ModItems.DIAMOND_IGNT);
                 entries.add(ModItems.DOUGH);
-                entries.add(ModItems.SOUL_PRISON);
-                entries.add(ModItems.WITHER_SOUL);
             })
             .build();
 
@@ -32,6 +30,8 @@ public class ModItemGroups {
                 entries.add(ModItems.RITUAL_KNIFE);
                 entries.add(ModItems.HUMAN_SKIN);
                 entries.add(ModItems.LIGHTSTONE_NERVE);
+                entries.add(ModItems.SOUL_PRISON);
+                entries.add(ModItems.WITHER_SOUL);
             })
             .build();
 

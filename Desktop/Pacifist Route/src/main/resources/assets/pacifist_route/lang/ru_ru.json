@@ -12,5 +12,10 @@
   "item.pacifist_route.wither_soul": "Душа визера",
   "item.pacifist_route.soul_prison.tooltip":"§oОтголосок тех времён, когда по земле ступала нежить...",
   "item.pacifist_route.wither_soul.tooltip": "§oУже при прикосновении можно почувствовать всю ярость, хранящуюся внутри...",
-  "item.pacifist_route.lightstone_nerve": "Светокаменный нерв"
+  "item.pacifist_route.lightstone_nerve": "Светокаменный нерв",
+  "effect.pacifist_route.blood_loss": "Потеря крови",
+  "item.pacifist_route.human_skin.quality.fresh": "Свежий",
+  "item.pacifist_route.human_skin.quality.stale": "Полежавший",
+  "item.pacifist_route.human_skin.quality.spoiling": "Подтухший",
+  "item.pacifist_route.human_skin.quality.rotten": "Испортившийся"
 }

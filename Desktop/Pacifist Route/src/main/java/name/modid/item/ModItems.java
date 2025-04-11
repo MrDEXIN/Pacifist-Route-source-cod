@@ -13,9 +13,9 @@ public class ModItems {
     public static final Item IRONFIGNA_BAGR = new Item(new FabricItemSettings());
     public static final Item DOUGH = new Item(new FabricItemSettings());
     public static final Item DIAMOND_IGNT = new Item(new FabricItemSettings());
-    public static final Item HUMAN_SKIN = new Item(new FabricItemSettings());
+    public static final Item HUMAN_SKIN = new HumanSkinItem(new FabricItemSettings());
     public static final StatusEffect BLEEDING = new BleedingEffect();
-    public static final Item RITUAL_KNIFE = new RitualKnifeItem(); // Исправленный конструктор
+    public static final Item RITUAL_KNIFE = new RitualKnifeItem();
     public static final Item SOUL_PRISON = new SoulPrisonItem(new FabricItemSettings().maxCount(1));
     public static final Item WITHER_SOUL = new WitherSoulItem(new FabricItemSettings().maxCount(1));
     public static final Item LIGHTSTONE_NERVE = new Item(new FabricItemSettings());
@@ -33,10 +33,6 @@ public class ModItems {
     }
 
     public static void registerEffects() {
-        Registry.register(
-                Registries.STATUS_EFFECT,
-                new Identifier("pacifist_route", "bleeding"),
-                BLEEDING
-        );
+        Registry.register(Registries.STATUS_EFFECT, new Identifier("pacifist_route", "bleeding"), BLEEDING);
     }
 }

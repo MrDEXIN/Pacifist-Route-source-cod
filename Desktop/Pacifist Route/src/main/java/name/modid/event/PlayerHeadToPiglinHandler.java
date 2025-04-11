@@ -26,46 +26,37 @@ public class PlayerHeadToPiglinHandler implements UseBlockCallback {
         BlockState state = world.getBlockState(pos);
         ItemStack heldItem = player.getStackInHand(hand);
 
-        // Проверяем, что игрок кликает по голове игрока и держит кусок свинины
-        if (state.getBlock() == Blocks.PLAYER_HEAD && heldItem.getItem() == Items.PORKCHOP) {
-            if (!world.isClient) { // Проверяем, что код выполняется на сервере
-                // Убираем кусок свинины из руки игрока
+        // Проверяем оба типа головы игрока
+        if ((state.getBlock() == Blocks.PLAYER_HEAD || state.getBlock() == Blocks.PLAYER_WALL_HEAD) && heldItem.getItem() == Items.PORKCHOP) {
+            if (!world.isClient) {
                 heldItem.decrement(1);
 
-                // Получаем текущую ориентацию головы игрока
-                int rotation = state.get(Properties.ROTATION); // Свойство ROTATION определяет направление
+                BlockState piglinHeadState;
+                if (state.getBlock() == Blocks.PLAYER_HEAD) {
+                    int rotation = state.get(Properties.ROTATION);
+                    piglinHeadState = Blocks.PIGLIN_HEAD.getDefaultState().with(Properties.ROTATION, rotation);
+                } else {
+                    var facing = state.get(Properties.HORIZONTAL_FACING);
+                    piglinHeadState = Blocks.PIGLIN_WALL_HEAD.getDefaultState().with(Properties.HORIZONTAL_FACING, facing);
+                }
 
-                // Создаем новое состояние для головы пиглина с той же ориентацией
-                BlockState piglinHeadState = Blocks.PIGLIN_HEAD.getDefaultState().with(Properties.ROTATION, rotation);
-
-                // Заменяем голову игрока на голову пиглина с сохранением ориентации
                 world.setBlockState(pos, piglinHeadState);
 
-                // Воспроизводим звук превращения
-                world.playSound(
-                        null,                       // Игрок (null для всех игроков)
-                        pos,                        // Позиция звука
-                        SoundEvents.ENTITY_PIGLIN_AMBIENT, // Звук пиглина
-                        SoundCategory.BLOCKS,       // Категория звука
-                        1.0F,                       // Громкость
-                        1.0F                        // Высота тона
-                );
+                world.playSound(null, pos, SoundEvents.ENTITY_PIGLIN_AMBIENT, SoundCategory.BLOCKS, 1.0F, 1.0F);
 
-                // Создаем красные частицы (капли)
-                Vector3f redColor = new Vector3f(255.0F, 160.0F, 122.0F); // Красный цвет (RGB)
-                DustParticleEffect dustParticleEffect = new DustParticleEffect(redColor, 1.0F); // Масштаб 1.0F
+                Vector3f redColor = new Vector3f(255.0F, 160.0F, 122.0F);
+                DustParticleEffect dustParticleEffect = new DustParticleEffect(redColor, 1.0F);
 
-                // Создаем частицы
                 ((ServerWorld) world).spawnParticles(
-                        dustParticleEffect,         // Тип частиц (красные пылевые частицы)
-                        pos.getX() + 0.5,          // X координата центра блока
-                        pos.getY() + 0.3,          // Y координата центра блока
-                        pos.getZ() + 0.5,          // Z координата центра блока
-                        400,                        // Количество частиц
-                        0.2,                       // Разброс по X
-                        0.2,                       // Разброс по Y
-                        0.2,                       // Разброс по Z
-                        0.1                        // Скорость частиц
+                        dustParticleEffect,
+                        pos.getX() + 0.5,
+                        pos.getY() + 0.3,
+                        pos.getZ() + 0.5,
+                        400,
+                        0.2,
+                        0.2,
+                        0.2,
+                        0.1
                 );
             }
 
