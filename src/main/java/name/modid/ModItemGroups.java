@@ -7,12 +7,12 @@ import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.text.Text;
 import net.minecraft.util.Identifier;
-import name.modid.item.ModItems; // Импортируем предметы
+import name.modid.item.ModItems; 
 
 public class ModItemGroups {
     // Создаём группу предметов
     public static final ItemGroup PEACEFUL_SURVIVAL_GROUP = FabricItemGroup.builder()
-            .icon(() -> new ItemStack(ModItems.IRONFIGNA)) // Иконка группы (используем первый предмет)
+            .icon(() -> new ItemStack(ModItems.IRONFIGNA)) // Иконка группы 
             .displayName(Text.translatable("itemGroup.pacifist_route.group")) // Название группы
             .entries((context, entries) -> {
                 // Добавляем предметы в группу
@@ -23,7 +23,6 @@ public class ModItemGroups {
             })
             .build();
 
-    // Метод для регистрации группы
     public static void registerItemGroups() {
         Registry.register(Registries.ITEM_GROUP, new Identifier("pacifist_route", "group"), PEACEFUL_SURVIVAL_GROUP);
     }
