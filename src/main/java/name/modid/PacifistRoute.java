@@ -27,8 +27,6 @@ public class PacifistRoute implements ModInitializer {
         // Регистрируем обработчик взаимодействия с шерстью
         UseBlockCallback.EVENT.register(new WoolInteractionHandler());
 
-        // Регистрируем удаление стандартного рецепта хлеба
-
         System.out.println("Мод Pacifist Route успешно загружен!");
     }
 }
