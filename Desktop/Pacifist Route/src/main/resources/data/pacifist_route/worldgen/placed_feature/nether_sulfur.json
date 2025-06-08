@@ -1,0 +1,24 @@
+{
+  "feature": "pacifist_route:nether_sulfur",
+  "placement": [
+    {
+      "type": "minecraft:count",
+      "count": 2
+    },
+    {
+      "type": "minecraft:in_square"
+    },
+    {
+      "type": "minecraft:height_range",
+      "height": {
+        "type": "minecraft:uniform",
+        "min_inclusive": {
+          "absolute": 1
+        },
+        "max_inclusive": {
+          "absolute": 120
+        }
+      }
+    }
+  ]
+}

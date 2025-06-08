@@ -1,4 +1,3 @@
-// FallingAnvilMixin.java
 package name.modid.mixin;
 
 import net.minecraft.block.Block;
@@ -24,7 +23,6 @@ import name.modid.item.ModItems;
 @Mixin(FallingBlockEntity.class)
 public abstract class FallingAnvilMixin {
 
-    // Список всех вариаций наковальни
     private static final Block[] ANVILS = {
             Blocks.ANVIL,
             Blocks.CHIPPED_ANVIL,
@@ -100,7 +98,6 @@ public abstract class FallingAnvilMixin {
         double radius = 3.0; // Радиус звезды
         int points = 4;      // Количество лучей
 
-        // Углы для 4 точек (0°, 90°, 180°, 270°)
         for (int i = 0; i < 360; i += 90) {
             double angle = Math.toRadians(i);
 
@@ -115,7 +112,7 @@ public abstract class FallingAnvilMixin {
                     center.z + z,
                     20,             // Количество частиц на луч
                     0.3,            // Разброс по X
-                    0.0,            // Разброс по Y (0 для плоской формы)
+                    0.0,            // Разброс по Y
                     0.3,            // Разброс по Z
                     0.15            // Скорость
             );

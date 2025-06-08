@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "facing=up": { "model": "pacifist_route:block/large_nitre_bud" },
+    "facing=down": { "model": "pacifist_route:block/large_nitre_bud", "x": 180 },
+    "facing=north": { "model": "pacifist_route:block/large_nitre_bud", "x": 90 },
+    "facing=south": { "model": "pacifist_route:block/large_nitre_bud", "x": 90, "y": 180 },
+    "facing=west": { "model": "pacifist_route:block/large_nitre_bud", "x": 90, "y": 270 },
+    "facing=east": { "model": "pacifist_route:block/large_nitre_bud", "x": 90, "y": 90 }
+  }
+}

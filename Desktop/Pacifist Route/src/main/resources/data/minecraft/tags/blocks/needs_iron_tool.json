@@ -1,0 +1,13 @@
+{
+  "values": [
+    "pacifist_route:budding_nitre",
+    "pacifist_route:large_nitre_bud",
+    "pacifist_route:medium_nitre_bud",
+    "pacifist_route:nitre_cluster",
+    "pacifist_route:nitre_crystal_block",
+    "pacifist_route:tiny_nitre_bud",
+    "pacifist_route:small_nitre_bud",
+    "pacifist_route:sulfur_in_stone",
+    "pacifist_route:sulfur_in_deep"
+  ]
+}

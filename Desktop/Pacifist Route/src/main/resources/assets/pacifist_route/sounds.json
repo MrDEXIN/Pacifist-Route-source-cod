@@ -1,0 +1,11 @@
+{
+  "mortar_grind_1": {
+    "sounds": ["pacifist_route:mortar_grind_1"]
+  },
+  "mortar_grind_2": {
+    "sounds": ["pacifist_route:mortar_grind_2"]
+  },
+  "mortar_grind_3": {
+    "sounds": ["pacifist_route:mortar_grind_3"]
+  }
+}

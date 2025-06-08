@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    "pacifist_route:nitre_shard",
+    "pacifist_route:nether_crystal_sulfur",
+    "pacifist_route:deep_crystal_sulfur",
+    "pacifist_route:stone_crystal_sulfur"
+  ]
+}

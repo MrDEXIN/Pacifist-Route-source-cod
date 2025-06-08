@@ -1,7 +1,7 @@
 {
 	"schemaVersion": 1,
 	"id": "pacifist_route",
-	"version": "1.1.0",
+	"version": "1.1.1",
 	"name": "Pacifist Route",
 	"description": "A mod for peaceful survival gameplay.",
 	"icon": "assets/pacifist_route/icon.png",
@@ -15,7 +15,9 @@
 	"license": "MIT",
 	"environment": "*",
 	"entrypoints": {
-		"main": ["name.modid.PacifistRoute"]
+		"main": ["name.modid.PacifistRoute"],
+		"client": ["name.modid.client.ModClient"],
+		"fabric-datagen": ["name.modid.datagen.ModDataGenerator"]
 	},
 	"mixins": [
 		"pacifist_route.mixins.json"
@@ -23,6 +25,7 @@
 	"depends": {
 		"fabricloader": ">=0.16.0",
 		"fabric-api": "*",
-		"minecraft": "1.20.1"
+		"minecraft": "1.20.1",
+		"geckolib": ">=4.0.0"
 	}
 }

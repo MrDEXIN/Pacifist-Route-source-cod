@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "decorations",
+  "pattern": [
+    "PLP",
+    " S ",
+    "S S"
+  ],
+  "key": {
+    "S": {
+      "item": "minecraft:spruce_slab"
+    },
+    "P": {
+      "item": "minecraft:spruce_planks"
+    },
+    "L": {
+      "item": "minecraft:stick"
+    }
+  },
+  "result": {
+    "item": "pacifist_route:mortar",
+    "count": 1
+  }
+}

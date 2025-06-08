@@ -5,7 +5,8 @@
   "mixins": [
     "ExampleMixin",
     "FallingAnvilMixin",
-    "ItemStackMixin"
+    "ItemStackMixin",
+    "MixinMouse"
 
   ],
   "injectors": {

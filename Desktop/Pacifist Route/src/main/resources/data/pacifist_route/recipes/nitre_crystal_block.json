@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building_blocks",
+  "pattern": [
+    "SS",
+    "SS"
+  ],
+  "key": {
+    "S": {
+      "item": "pacifist_route:nitre_shard"
+    }
+  },
+  "result": {
+    "item": "pacifist_route:nitre_crystal_block",
+    "count": 1
+  }
+}

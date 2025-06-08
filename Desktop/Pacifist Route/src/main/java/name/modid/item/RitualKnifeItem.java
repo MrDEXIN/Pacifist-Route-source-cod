@@ -36,7 +36,7 @@ public class RitualKnifeItem extends SwordItem {
         int amplifier = 0;
 
         if (currentEffect != null) {
-            amplifier = Math.min(currentEffect.getAmplifier() + 1, 2); // Максимум amplifier=2 (III уровень)
+            amplifier = Math.min(currentEffect.getAmplifier() + 1, 2); // Максимум (III уровень)
             duration = (amplifier == 2) ? 1200 : duration; // Бесконечная длительность для III уровня
         }
 
@@ -74,14 +74,11 @@ public class RitualKnifeItem extends SwordItem {
     public boolean postHit(ItemStack stack, LivingEntity target, LivingEntity attacker) {
         stack.damage(1, attacker, (e) -> e.sendToolBreakStatus(attacker.getActiveHand()));
 
-        // Проверяем, является ли цель игроком
         if (target instanceof PlayerEntity && !target.getWorld().isClient()) {
             PlayerEntity playerTarget = (PlayerEntity) target;
 
-            // Наносим уменьшенный урон (0.5 / 1.5 = ~0.33)
             playerTarget.damage(playerTarget.getDamageSources().mobAttack(attacker), 0.33F);
 
-            // Шанс выпадения HumanSkinItem
             if (playerTarget.getWorld().getRandom().nextFloat() < HUMAN_SKIN_DROP_CHANCE) {
                 playerTarget.dropStack(new ItemStack(ModItems.HUMAN_SKIN));
             }
@@ -97,16 +94,13 @@ public class RitualKnifeItem extends SwordItem {
 
     @Override
     public void appendTooltip(ItemStack stack, World world, List<Text> tooltip, TooltipContext context) {
-        // Добавляем стандартные атрибуты (урон и скорость атаки)
+
         super.appendTooltip(stack, world, tooltip, context);
 
-        // Находим индекс строки с уроном (обычно это первая строка после названия предмета)
-        // В Minecraft 1.20.1 строка урона добавляется автоматически через атрибуты
-        // Мы вставляем нашу надпись сразу после первой строки с атрибутами (урон)
         int damageLineIndex = -1;
         for (int i = 0; i < tooltip.size(); i++) {
             String line = tooltip.get(i).getString();
-            if (line.contains("Attack Damage") || line.matches(".*\\+\\d+.*")) { // Ищем строку с уроном
+            if (line.contains("Attack Damage") || line.matches(".*\\+\\d+.*")) {
                 damageLineIndex = i;
                 break;
             }

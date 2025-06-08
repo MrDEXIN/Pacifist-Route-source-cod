@@ -27,7 +27,6 @@ public abstract class ItemStackMixin {
             long time1 = nbt1.contains("CreationTime") ? nbt1.getLong("CreationTime") : Long.MAX_VALUE;
             long time2 = nbt2.contains("CreationTime") ? nbt2.getLong("CreationTime") : Long.MAX_VALUE;
 
-            // Сохраняем меньший CreationTime в обоих стаках
             long olderTime = Math.min(time1, time2);
             nbt1.putLong("CreationTime", olderTime);
             nbt2.putLong("CreationTime", olderTime);
@@ -52,7 +51,6 @@ public abstract class ItemStackMixin {
                 return; // Таймер остается как у подбираемого предмета
             }
 
-            // В этот момент canCombine уже должен был установить меньший CreationTime
         }
     }
 
@@ -69,8 +67,7 @@ public abstract class ItemStackMixin {
             NbtCompound nbtSplit = splitStack.getOrCreateNbt();
 
             long originalTime = nbtOriginal.contains("CreationTime") ? nbtOriginal.getLong("CreationTime") : Long.MAX_VALUE;
-            nbtSplit.putLong("CreationTime", originalTime); // Отделяемый предмет сохраняет таймер стака
-            // Таймер исходного стака не меняется
+            nbtSplit.putLong("CreationTime", originalTime);
         }
     }
 }

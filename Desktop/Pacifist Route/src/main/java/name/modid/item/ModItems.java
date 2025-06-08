@@ -19,6 +19,12 @@ public class ModItems {
     public static final Item SOUL_PRISON = new SoulPrisonItem(new FabricItemSettings().maxCount(1));
     public static final Item WITHER_SOUL = new WitherSoulItem(new FabricItemSettings().maxCount(1));
     public static final Item LIGHTSTONE_NERVE = new Item(new FabricItemSettings());
+    public static final Item NITRE_SHARD = new Item(new FabricItemSettings());
+    public static final Item NETHER_CRYSTAL_SULFUR = new Item(new FabricItemSettings());
+    public static final Item DEEP_CRYSTAL_SULFUR = new Item(new FabricItemSettings());
+    public static final Item STONE_CRYSTAL_SULFUR = new Item(new FabricItemSettings());
+    public static final Item SULFUR = new Item(new FabricItemSettings());
+    public static final Item SALTPETER = new Item(new FabricItemSettings());
 
     public static void registerItems() {
         Registry.register(Registries.ITEM, new Identifier("pacifist_route", "ironfigna"), IRONFIGNA);
@@ -30,6 +36,12 @@ public class ModItems {
         Registry.register(Registries.ITEM, new Identifier("pacifist_route", "soul_prison"), SOUL_PRISON);
         Registry.register(Registries.ITEM, new Identifier("pacifist_route", "wither_soul"), WITHER_SOUL);
         Registry.register(Registries.ITEM, new Identifier("pacifist_route", "lightstone_nerve"), LIGHTSTONE_NERVE);
+        Registry.register(Registries.ITEM, new Identifier("pacifist_route", "nitre_shard"), NITRE_SHARD);
+        Registry.register(Registries.ITEM, new Identifier("pacifist_route", "nether_crystal_sulfur"), NETHER_CRYSTAL_SULFUR);
+        Registry.register(Registries.ITEM, new Identifier("pacifist_route", "deep_crystal_sulfur"), DEEP_CRYSTAL_SULFUR);
+        Registry.register(Registries.ITEM, new Identifier("pacifist_route", "stone_crystal_sulfur"), STONE_CRYSTAL_SULFUR);
+        Registry.register(Registries.ITEM, new Identifier("pacifist_route", "sulfur"), SULFUR);
+        Registry.register(Registries.ITEM, new Identifier("pacifist_route", "saltpeter"), SALTPETER);
     }
 
     public static void registerEffects() {

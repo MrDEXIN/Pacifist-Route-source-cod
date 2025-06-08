@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "facing=up": { "model": "pacifist_route:block/nitre_cluster" },
+    "facing=down": { "model": "pacifist_route:block/nitre_cluster", "x": 180 },
+    "facing=north": { "model": "pacifist_route:block/nitre_cluster", "x": 90 },
+    "facing=south": { "model": "pacifist_route:block/nitre_cluster", "x": 90, "y": 180 },
+    "facing=west": { "model": "pacifist_route:block/nitre_cluster", "x": 90, "y": 270 },
+    "facing=east": { "model": "pacifist_route:block/nitre_cluster", "x": 90, "y": 90 }
+  }
+}
